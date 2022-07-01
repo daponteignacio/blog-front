@@ -1,0 +1,44 @@
+@use 'variables' as v;
+
+@mixin boton($bgColor, $colorTexto) {
+    width: auto;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    padding: 8px 15px;
+    font-weight: bold;
+    color: $colorTexto;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $bgColor;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        background-color: lighten( $bgColor, 10% );
+        color: $colorTexto;
+    }
+}
+
+/** Media Queries **/
+@mixin telefono {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width: 720px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (max-width: 1080px) {
+        @content;
+    }
+}
+
+@mixin grid($columnas, $espaciado ) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}

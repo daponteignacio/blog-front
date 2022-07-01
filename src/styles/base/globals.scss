@@ -1,0 +1,55 @@
+@use "./mixins" as m;
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: rgb(227, 227, 227);
+}
+
+.center__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  height: 100vh;
+}
+
+textarea {
+  resize: none;
+  height: 200px;
+}
+
+.form {
+  width: 50%;
+}
+
+.navbar__logged {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar {
+  margin-bottom: 30px;
+
+  @include m.tablet {
+    margin-bottom: 10px;
+  }
+}
+
+.navbar__auth {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+}

@@ -1,0 +1,96 @@
+@use './mixins' as m;
+
+.entry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @include m.tablet {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+}
+
+.entry-container {
+  display: flex;
+  padding: 10px;
+  border-radius: 15px;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.1s ease-in-out;
+  // border-left: 6px solid transparent;
+  // border-right: 6px solid transparent;
+  background-color: rgb(244, 244, 244);
+
+  
+  &:hover {
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+    // border-left: 6px solid rgb(70, 70, 70);
+    // border-right: 6px solid rgb(70, 70, 70);
+  }
+}
+
+.entry-title {
+  font-weight: 700;
+}
+
+.entry-desc, .entry-date {
+  font-weight: 500;
+  margin: 0;
+}
+
+.entry-date {
+  color: green;
+  margin-bottom: 15px;
+}
+
+
+
+.entry-fs__container {
+  width: 50%;
+  margin-top: 50px;
+}
+
+.entry-fs__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.entry-fs__header--inner {
+    display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: center;
+}
+
+.entry-fs__title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.entry-fs__date {
+  margin: 0;
+  font-weight: 500;
+}
+
+.entry-fs__desc {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.entry-fs__desc--body {
+  font-weight: normal;
+}
+
+.entry-fs__body {
+    font-size: 18px;
+    text-justify: newspaper;
+    font-family: 'Times New Roman', Times, serif;
+}
